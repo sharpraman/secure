@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div class="mainhead">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-md-4">
+				<div class="leftpart">
+					Service	
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="midpart text-center">
+					Logo
+				</div>
+			</div>
+			<div class="col-md-4 ">
+				<div class="rightpart d-flex justify-content-end align-items-center">
+					<div class="getin">
+						<a href="#">Get In Touch</a>
+					</div>
+					<div class="srch d-flex justify-content-end">
+						<input type="text" value="">
+						<i class="fa fa-search"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<ul class="menu">
+	<li>Home</li>
+	<li>About</li>
+	<li>Service</li>
+	<li>Gallery</li>
+	<li>Contact</li>
+</ul>
+
+<div class="slick">
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="custom.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){	
+		$('.menu li').each(function(index){	
+            console.log(index);
+       		var menu = $(this).text();
+       		console.log(menu);
+		$('.slick li').eq(index).text(menu);
+	});
+});
+</script>
+
+</body>
+</html>
